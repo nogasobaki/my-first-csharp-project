@@ -21,41 +21,27 @@ namespace projekt{
        float y;
        
        y=float.Parse(Console.ReadLine());
+      
+       switch (a) {
 
-      if (a == "+") {
-
-          System.Console.WriteLine( $"ВАШ ОТВЕТ : {x + y} "); 
-          
-          }
-
-          else if ( a == "-")
-            {
-               System.Console.WriteLine( $"ВАШ ОТВЕТ : {x - y} " ); 
-
-            }
-            else if ( a == "*")
-            {
-                System.Console.WriteLine( $"ВАШ ОТВЕТ : {x * y} ");
-
-            }
-            else if (a == "/" && y == 0 )
-            {
-                
-                System.Console.WriteLine(" НА НОЛЬ ДЕЛИТЬ НЕЛЬЗЯ!");
-            }
-
-
-
-            else if ( a == "/")
-            {
-                System.Console.WriteLine( $"ВАШ ОТВЕТ : {x / y}" );
-
-
+           case "+" : 
+            System.Console.WriteLine($"ВАШ ОТВЕТ : {x + y } ");
+             break;
+           case "-" : 
+           System.Console.WriteLine($"ВАШ ОТВЕТ : {x - y } ");
+            break;
+          case "*" : 
+           System.Console.WriteLine($"ВАШ ОТВЕТ : {x * y } ");
+            break;
+            case "/"  : 
+           System.Console.WriteLine($"ВАШ ОТВЕТ : {x / y } ");
+            if ( y == 0)
+                    {
+                       System.Console.WriteLine(" НА НОЛЬ ДЕЛИТЬ НЕЛЬЗЯ!"); 
+                    }
+                    break; 
             
-
             }
-
-
 
 
             

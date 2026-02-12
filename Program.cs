@@ -6,70 +6,72 @@ namespace project
      {
           static void Main()
           {
-               while(true){
-
-               try
+               while (true)
                {
-                  
-               System.Console.WriteLine("\n\n=== КОНСОЛЬНЫЙ КАЛЬКУЛЯТОР === \n\n");
-               double x;
-               System.Console.WriteLine("== ВВЕДИТЕ ПЕРВОЕ ЗНАЧЕНИЕ : ==");
-               x = Double.Parse(Console.ReadLine());
 
-               string a;
-               System.Console.WriteLine("\n== ВВЕДИТЕ ДЕЙСТВИЕ ==");
-               a = Console.ReadLine();
+                    try
+                    {
 
-               double y;
-               System.Console.WriteLine("\n== ВВЕДИТЕ ВТОРОЕ ЗНАЧЕНИЕ : ==");
-               y = Double.Parse(Console.ReadLine());
+                         System.Console.WriteLine("\n\n=== КОНСОЛЬНЫЙ КАЛЬКУЛЯТОР === \n\n");
+                         double x;
+                         System.Console.WriteLine("== ВВЕДИТЕ ПЕРВОЕ ЗНАЧЕНИЕ : ==");
+                         x = Double.Parse(Console.ReadLine());
 
-               double result = 0;
-               switch (a)
-               {
-                    case "+":
-                         result = x + y;
-                         break;
+                         string a;
+                         System.Console.WriteLine("\n== ВВЕДИТЕ ДЕЙСТВИЕ ==");
+                         a = Console.ReadLine();
 
-                    case "-":
-                         result = x - y;
-                         break;
+                         double y;
+                         System.Console.WriteLine("\n== ВВЕДИТЕ ВТОРОЕ ЗНАЧЕНИЕ : ==");
+                         y = Double.Parse(Console.ReadLine());
 
-                    case "*":
-                         result = x * y;
-                         break;
+                         double result = 0;
+                         switch (a)
+                         {
+                              case "+":
+                                   result = x + y;
+                                   break;
 
-                    case "/":
-                         if (y == 0){
-                              System.Console.WriteLine("ДЕЛИТЬ НА НОЛЬ НЕЛЬЗЯ !!! ");
+                              case "-":
+                                   result = x - y;
+                                   break;
 
-                           continue;
-                                        
+                              case "*":
+                                   result = x * y;
+                                   break;
+
+                              case "/":
+                                   if (y == 0)
+                                   {
+                                        System.Console.WriteLine("ДЕЛИТЬ НА НОЛЬ НЕЛЬЗЯ !!! ");
+
+                                        continue;
+
                                    }
-                                   result = x / y; 
-                       
-                         break;
+                                   result = x / y;
 
-               }
-               System.Console.WriteLine(" \n\n ВАШ ГРЁБАННЫЙ ОТВЕТ: " + result);
-                System.Console.WriteLine("ВВЕДИТЕ 'надоел' ЧТОБЫ ВЫЙТИ ИЛИ НАЖМИТЕ  'ENTER' ЧТОБЫ ПРОДОЛЖИТЬ ");  
-                    string exit = Console.ReadLine();
-                    if (exit == "надоел")
-                    break;
-               }
-               catch (FormatException)
-               {
-                    System.Console.WriteLine(" \n\n\n БРАТИШ ТЫ ЧОТО НЕ ТО ВВОДИШЬ , ЗАНОГО СДЕЛАЙ ДА ");
-                    
-                    
+                                   break;
+
+                         }
+                         System.Console.WriteLine(" \n\n ВАШ ГРЁБАННЫЙ ОТВЕТ: " + result);
+                         System.Console.WriteLine("ВВЕДИТЕ 'надоел' ЧТОБЫ ВЫЙТИ ИЛИ НАЖМИТЕ  'ENTER' ЧТОБЫ ПРОДОЛЖИТЬ ");
+                         string exit = Console.ReadLine();
+                         if (exit == "надоел")
+                              break;
                     }
-                    
-              
+                    catch (FormatException)
+                    {
+                         System.Console.WriteLine(" \n\n\n БРАТИШ ТЫ ЧОТО НЕ ТО ВВОДИШЬ , ЗАНОГО СДЕЛАЙ ДА ");
+
+
+                    }
+
+
                }
-             
 
 
-              
+
+
 
 
 
